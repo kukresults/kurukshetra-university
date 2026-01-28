@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Result Report | Login</title>
+<style>
+body{font-family:Arial;background:#f2f2f2}
+.box{
+  width:320px;margin:120px auto;background:#fff;
+  padding:20px;text-align:center;border-radius:6px
+}
+img{width:90px;margin-bottom:10px}
+input{width:100%;padding:10px;margin:10px 0}
+button{
+  width:100%;padding:10px;background:#0d6efd;
+  color:#fff;border:none;cursor:pointer
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <img src="logoo.png">
+  <h3>Result Report</h3>
+
+  <input type="text" id="login" placeholder="Roll No / Regn No">
+  <button onclick="verify()">Verify</button>
+</div>
+
+<script>
+function verify(){
+  const val = document.getElementById("login").value.trim();
+
+  const roll = "2024239714";
+  const regn = "24-GNK-218";
+
+  if(val === roll || val === regn){
+    window.location.href = "result.html";
+  }else{
+    alert("Invalid Roll No / Registration No");
+  }
+}
+</script>
+
+</body>
+</html>

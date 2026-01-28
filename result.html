@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Result</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+}
+.container{
+    width:1100px;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border:1px solid #999;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    align-items:center;
+    border-bottom:2px solid #000;
+    padding-bottom:10px;
+}
+.logo{ width:90px; }
+.header-text{
+    flex:1;
+    text-align:center;
+}
+.header-text h1{ margin:0; font-size:26px; }
+.header-text p{ margin:2px; font-size:14px; }
+
+/* DEMO */
+.demo{
+    text-align:center;
+    color:red;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+/* PDF BUTTON */
+.pdf-btn{
+    padding:8px 16px;
+    font-size:14px;
+    cursor:pointer;
+    border:1px solid #000;
+    background:#f5f5f5;
+}
+.pdf-btn:hover{ background:#ddd; }
+
+/* INFO + PHOTO */
+.info-wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin:15px 0;
+}
+.info{ width:75%; font-size:14px; }
+.info td{ padding:6px; }
+.photo{
+    width:90px;
+    height:110px;
+    border:1px solid #000;
+    object-fit:cover;
+}
+
+/* MARKSHEET */
+.marksheet{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13px;
+}
+.marksheet th,
+.marksheet td{
+    border:1px solid #000;
+    padding:4px;
+    text-align:center;
+}
+.marksheet th{ background:#eee; }
+.left{ text-align:left; }
+
+/* FOOTER */
+.footer{ margin-top:15px; font-size:14px; }
+
+/* PRINT */
+@media print{
+    body{ background:white; }
+    .pdf-btn, .demo{ display:none; }
+    .container{
+        border:none;
+        margin:0;
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+    <img src="kuk-logo.png" class="logo">
+    <div class="header-text">
+        <h1>Kurukshetra University, Kurukshetra</h1>
+        <p>(Established by the State Legislature Act XII of 1956)</p>
+        <p>(A++ Grade, NAAC Accredited)</p>
+    </div>
+</div>
+
+<div class="demo">(OFFICIAL RESULT)</div>
+
+<div style="text-align:right; margin:10px 0;">
+    <button class="pdf-btn" onclick="downloadPDF()">⬇ Download PDF</button>
+</div>
+
+<h3 style="text-align:center;">
+Result-cum-Grade Card<br>
+Bachelor of Commerce Vocational in Computer Applications (Semester-II)<br>
+Examination Session: May 2025
+</h3>
+
+<!-- INFO + PHOTO -->
+<div class="info-wrap">
+<table class="info">
+<tr>
+<td><b>Student Name:</b> KRISH</td>
+<td><b>Roll No:</b> 2024239714</td>
+</tr>
+<tr>
+<td><b>Father's Name:</b> SANJEEV KUMAR</td>
+<td><b>Regn No:</b> 24-GNK-218</td>
+</tr>
+<tr>
+<td><b>Mother's Name:</b> NEELAM RANI</td>
+<td><b>DMC No:</b> 726191</td>
+</tr>
+</table>
+
+<img src="photo.jpg" class="photo">
+</div>
+
+<!-- MARKSHEET -->
+<table class="marksheet">
+<tr>
+<th rowspan="3">Course Code</th>
+<th rowspan="3">Course Name</th>
+<th rowspan="3">Credit</th>
+<th colspan="6">Theory</th>
+<th colspan="6">Practical</th>
+<th rowspan="3">Total</th>
+<th rowspan="3">%</th>
+<th rowspan="3">Grade</th>
+</tr>
+
+<tr>
+<th colspan="3">External</th>
+<th colspan="3">Internal</th>
+<th colspan="3">External</th>
+<th colspan="3">Internal</th>
+</tr>
+
+<tr>
+<th>MO</th><th>MPM</th><th>MM</th>
+<th>MO</th><th>MPM</th><th>MM</th>
+<th>MO</th><th>MPM</th><th>MM</th>
+<th>MO</th><th>MPM</th><th>MM</th>
+</tr>
+
+<tr>
+<td>B23-AEC-P241</td>
+<td class="left">Punjabi Bhasha Ate Sanchar-2</td>
+<td>2</td>
+<td>19</td><td>14</td><td>35</td>
+<td>14</td><td>0</td><td>15</td>
+<td>-</td><td>-</td><td>-</td>
+<td>-</td><td>-</td><td>-</td>
+<td>33</td><td>66</td><td>A</td>
+</tr>
+
+<tr>
+<td>B23-COM-201</td>
+<td class="left">Computerized Accounting System</td>
+<td>4</td>
+<td>20</td><td>20</td><td>50</td>
+<td>18</td><td>0</td><td>20</td>
+<td>20</td><td>8</td><td>20</td>
+<td>8</td><td>0</td><td>10</td>
+<td>66</td><td>66</td><td>A</td>
+</tr>
+
+<tr>
+<td>B23-COM-202</td>
+<td class="left">Company Law</td>
+<td>4</td>
+<td>28</td><td>28</td><td>70</td>
+<td>26</td><td>0</td><td>30</td>
+<td>-</td><td>-</td><td>-</td>
+<td>-</td><td>-</td><td>-</td>
+<td>54</td><td>54</td><td>B</td>
+</tr>
+
+<tr>
+<td>B23-COM-203</td>
+<td class="left">Principles of Marketing</td>
+<td>4</td>
+<td>30</td><td>28</td><td>70</td>
+<td>25</td><td>0</td><td>30</td>
+<td>-</td><td>-</td><td>-</td>
+<td>-</td><td>-</td><td>-</td>
+<td>55</td><td>55</td><td>B</td>
+</tr>
+
+<tr>
+<td>B23-COM-204</td>
+<td class="left">Business Mathematics-II</td>
+<td>2</td>
+<td>20</td><td>14</td><td>35</td>
+<td>14</td><td>0</td><td>15</td>
+<td>-</td><td>-</td><td>-</td>
+<td>-</td><td>-</td><td>-</td>
+<td>34</td><td>68</td><td>A</td>
+</tr>
+
+<tr>
+<td>B23-SEC-214</td>
+<td class="left">Business Communication</td>
+<td>3</td>
+<td>20</td><td>20</td><td>50</td>
+<td>25</td><td>0</td><td>25</td>
+<td>-</td><td>-</td><td>-</td>
+<td>-</td><td>-</td><td>-</td>
+<td>45</td><td>60</td><td>B+</td>
+</tr>
+
+<tr>
+<td>B23-TMG-205</td>
+<td class="left">Major Tourist Destinations of The World</td>
+<td>3</td>
+<td>25</td><td>20</td><td>50</td>
+<td>24</td><td>0</td><td>25</td>
+<td>-</td><td>-</td><td>-</td>
+<td>-</td><td>-</td><td>-</td>
+<td>49</td><td>65</td><td>A</td>
+</tr>
+
+<tr>
+<td>B23-VAC-101</td>
+<td class="left">Human Values and Ethics</td>
+<td>2</td>
+<td>18</td><td>14</td><td>35</td>
+<td>14</td><td>0</td><td>15</td>
+<td>-</td><td>-</td><td>-</td>
+<td>-</td><td>-</td><td>-</td>
+<td>32</td><td>64</td><td>B+</td>
+</tr>
+</table>
+
+<div class="footer">
+<b>Result Status:</b> PASS <br>
+<b>Result Declaration Date:</b> 19-Jan-2026
+</div>
+
+</div>
+
+<script>
+function downloadPDF(){
+    document.title = "Result";
+    window.print();
+}
+</script>
+
+</body>
+</html>
